@@ -29,3 +29,4 @@
 
 5.1. Использовала схему п.4
 
+Ссылка на измененную схему верстки(с тегами): https://www.figma.com/file/5EIit0rt3MagQn7GlpPAUc/teg?node-id=6-179&t=uht78BmG3cM1ZXFH-0
