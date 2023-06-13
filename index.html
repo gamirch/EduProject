@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" contant="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes</title>
+
+    <link rel="stylesheet" href="./styles/style.css" type="text/css"/>
+    
+    
+  </head>
+  <body>
+    <div class="container">
+    <header class ="header">
+      <div class="header__wrapper container">
+        <div class="header__main"> 
+          <a class="header__logotype" href="#">Recipes</a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link">Главная</a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link">Рецепты</a>
+                </li>
+                <li class="header__nav-list-item">
+                  <a class="header__nav-list-link">Избранное</a>
+                </li>
+            </ul>
+          </nav>
+        </div>
+
+    <div class="header__authorization">
+        <img class="header__authorization-img" src="./img/login_in_main.svg" />
+        <a class="header__authorization-button">Войти</a>
+     </div>
+    </div>
+  </header>
+
+   <main class="main">
+      <section class="recipe">
+        <div class="recipe__wrapper container">
+            <h2 class="recipe__title">Готовь и делись<br /> рецептами</h2>
+            <p class="recipe__text">Никаких кулинарных книг и блокнотов! Храни все<br>любимые рецепты в одном месте.</p>
+            <div class="recipe__button">
+                <button class="recipe__button-add">+ Добавить рецепт</button>
+                <button class="recipe__button-authorization">Войти</button>
+          </div>
+       </div>
+      </section>
+
+      <section class="tags container">
+        <h2 class="tags__title">Умная сортировка по тегам</h2>
+        <p class="tags__text">Добавляй рецепты и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p>
+        <ul class="tags__list">
+          <li class="tags__list-item">
+            <img class="tags__list-item-img" src="./img/simple_meals.svg">
+            <h3 class="tags__list-item-title">Простые блюда</h3>
+            <p class="tags__list-item-text">Время приготвления таких блюд не более 1 часа</p>
+          </li>
+          <li class="tags__list-item">
+            <img class="tags__list-item-img" src="./img/childrens.svg">
+            <h3 class="tags__list-item-title">Детское</h3>
+            <p class="tags__list-item-text">Самые полезные блюда которые можно детям любого возраста</p>
+        </li>
+        <li class="tags__list-item">
+            <img class="tags__list-item-img" src="./img/from_the_chef.svg">
+            <h3 class="tags__list-item-title">От шеф-поваров</h3>
+            <p class="tags__list-item-text">Требуют умения, времени и терпения, зато как в ресторане</p>
+        </li>
+        <li class="tags__list-item">
+            <img class="tags__list-item-img" src="./img/on_holidays.svg">
+            <h3 class="tags__list-item-title">На праздник</h3>
+            <p class="tags__list-item-text">Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+        </li>
+        </ul>
+      </section>
+
+      <section class="recipe-day container">
+        <div class="recipe-day__author-img">
+          <img class="recipe-day__author-img" src="./img/pumpkin_soup.jpg" alt="jpg"> 
+          <a class="recipe-day__author-link">@glazest</a>
+        </div>
+        <div class="recipe-day__container">
+            <div class="recipe-day__container-img">
+              <div class="recipe-day__container-like">
+                <img class="recipe-day__container-like-img" src="img/like_border.svg"> 
+                <p class="recipe-day__container-like-text">356</p>
+              </div>
+              <div class="recipe-day__container-time">
+                <img class="recipe-day__container-time-img" src="img/timer_border.svg">
+                <p class="recipe-day__container-time-text">35 минут</p>
+            </div>
+        </div>
+         <img class="recipe-day__container-image" src="img/recipe_of_the_day.svg">
+          <h2 class="recipe-day__container-title">Тыквенный супчик на кокосовом молоке</h2>
+          <p class="recipe-day__container-text">Если у вас осталась тыква, и вы не знаете что с ней сделать, то это решение для вас! Ароматный, согревающий суп-пюре на кокосовом молоке. Можно даже в Пост! </p>
+        </div>
+      </section>
+
+      <section class="searching container">
+        <h2 class="searching__title">Поиск рецептов</h2>
+        <p class="searching__text">Введите примерное название блюда, а мы по тегам найдем его</p>
+        <div class="searching__container">
+            <form class="searching__container-input">
+              <input class="searching__input" id="find" type="text" value="Название блюда...">
+              <button class="searching__button">Поиск</button>
+              <ul class="searching__items">
+                <li class="searching__items-item"><a class="searching__items-link">Мясо</a></li>
+                <li class="searching__items-item"><a class="searching__items-link">Деликатесы</a></li>
+                <li class="searching__items-item"><a class="searching__items-link">Пироги</a></li>
+                <li class="searching__items-item"><a class="searching__items-link">Рыба</a></li>
+              </ul>
+            </form>
+        </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__logo">Recipes</p>
+        <p class="footer__desc">© Recipes 2021</p>
+      </div>
+  </footer>
+  </div>
+  </body>
+
+</html>
