@@ -1,0 +1,664 @@
+@font-face{
+  font-family: "Montserrat";
+  src:url(../fonts/Montserrat-Bold.woff2)format("woff2");
+  font-weight: 700;
+  /*font-style: normal;*/
+  font-display: swap;
+}
+@font-face{
+  font-family: "Montserrat";
+  src:url(../fonts/Montserrat-Medium.woff2)format("woff2");
+  font-weight: 500;
+ /* font-style: normal;*/
+  font-display: swap;
+}
+@font-face{
+  font-family: "Montserrat";
+  src:url(../fonts/Montserrat-Regular.woff2)format("woff2");
+  font-weight: 400;
+ /* font-style: normal;*/
+  font-display: swap;
+}
+@font-face{
+  font-family: "Montserrat";
+  src:url(../fonts/Montserrat-SemiBold.woff2)format("woff2");
+  font-weight: 600;
+  /*font-style: normal;*/
+  font-display: swap;
+}
+@font-face{
+  font-family: "Mulish";
+  src:url(../fonts/Mulish.woff2)format("woff2");
+  font-weight: 400;
+  /*font-style: normal;*/
+  font-display: swap;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+ /* box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;*/
+}
+
+@media (max-width: 1200px) {
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+body {
+  font-family: "Montserrat",sans-serif;   
+  position: relative;
+  min-width: 360px;
+}
+img {
+  max-width: 100%;
+}
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 100%;
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header__main {
+    display: flex;
+    gap: 80px;
+  }
+  .header__logotype {
+   font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 200px;
+    width: 100%;
+    height: 35px;
+    color: #FDB100;
+    text-decoration: none;
+    padding-right: 20px;
+  }
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 440px;
+  }
+
+ 
+
+  .header__nav-list{
+    display: flex;
+    justify-content: space-between;
+    width: 344px;
+    height: 22px;
+    padding-left: 0px;
+    padding-right: 0px;
+    gap: 40px;
+  }
+  .header__nav-list-item{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #9196A1;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  .header__nav-list-link{
+    text-decoration: none;
+    color: #9196A1 ;
+   font-weight: 400;
+  }
+  .header__nav-list-link:hover{
+    color: #3A3C41;
+  }
+ 
+
+.header__authorization{
+  /*display: flex;
+  height: 38px;
+  max-width: 112px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 80px;*/
+  display: flex;
+  gap: 14px;
+}
+.header__authorization-button{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #FDB100;
+  align-self: center;
+}
+/*можно не применять
+.header__authorization-button-text{
+  /*margin-left: 64px;
+  margin-top: -40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 200px;
+  width: 100%;
+  height: 35px;
+  color: #FDB100;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #FDB100;
+  align-self: center;
+}*/
+
+@media (max-width: 1200px) { 
+  .container {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 1025px) { 
+  .container {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 330px) { 
+  .header__wrapper {
+    display: block;
+  }
+  .header__main {
+    display: block;
+  }
+  .header__nav-list {
+    display: block;
+  }
+}
+.recipe{
+  /*max-width: 1440px;
+  height: 730px;
+  padding-bottom: 30px;
+  padding-left: 60px;*/
+  height: 800px;
+  background-image: url(../img/fruct_salat.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 211px;
+}
+.recipe__title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;;
+  font-size: 72px;
+  color: #25292D;
+  text-align: left;
+  width: 50%;
+}
+.recipe__text{
+  color: #4A525A;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #4A525A;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  text-align: left;
+  width: 50%;
+  padding-top: 16px;
+
+}
+.recipe__button{
+  display: flex;
+  gap: 24px;
+
+}
+.recipe__button-add{
+  background-color: #FDB100;
+  color: #fff;
+  border: none; 
+  border-radius: 16px; 
+  min-height: 60px; 
+  min-width: 278px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+
+}
+.recipe__button-authorization{
+  background-color: white;
+  color: #FDB100;
+  border: 1px solid #FDB100; 
+  border-radius: 16px; 
+  min-height: 60px; 
+  min-width: 216px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 330px) {
+  .recipe__title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #25292D;
+    text-align: left;
+    width: 50%;
+  }
+.recipe__button {
+    display: block;
+    
+}
+}
+/*.section__recipe--button{
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 16px;
+  height: 60px;
+  width: 25%;
+  background-color: #FDB100;
+  border: none;
+  color: #ffffff;
+  font-weight: 10px;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.section__recipe--button:hover{
+  color: #FDB100;
+  background-color: #ffffff;
+  border: 1px solid #FDB100;
+}
+.section__recipe--button-authorization{
+  max-width: 216px;
+
+  background-color: transparent;
+
+  border: 1px solid #FDB100;
+  color: #FDB100;
+}
+.section__recipe--button-authorization:hover{
+  color: #FFFFFF;
+  background-color: #FDB100;
+}
+  
+.section__recipe--img{
+  display: block;
+  float: right;
+  width: 50%;
+  margin-top: -475px;
+  margin-right: -55px;
+  border-radius: 0px 0px 0px 200px;
+}
+.section__recipe-container{
+  display: block;
+  float: left;
+  width: 50%;
+  margin-top: 144px;
+}*/
+
+/* Теги на странице */
+.tags {
+  padding-top: 113px;
+}
+.tags__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 62px;/*можно убрать*/
+  color: #25292D;
+}
+.tags__text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #4A525A;
+  padding-top: 16px;
+  width: 700px;
+}
+.tags__list{
+  display: flex;
+  padding-top: 42px;
+  list-style: none;
+  gap: 29px;
+}
+.tags__list-item{
+  max-width: 278px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
+  border-radius: 24px;
+  padding: 24px;
+  padding-bottom: 32px;
+}
+.tags__list-item-img{
+  padding-bottom: 24px;
+}
+.tags__list-item-title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #25292D;
+  padding-bottom: 16px;
+}
+.tags__list-item-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #4A525A;
+  max-width: 230px;
+  line-height: 30px;
+}
+
+@media (max-width: 330px) {
+  .tags__text {
+    width: 300px;
+  }
+
+  .tags__list{
+    display: block;
+  }
+}
+
+/*html view*/
+.recipe-day{
+  display: flex;
+  gap: 73px;
+  padding-top: 157px;
+}
+.recipe-day__author-img{
+  position: relative;
+  width: 100%;
+}
+.recipe-day__author-link{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #FDB100;
+  background-color: #FFFFFF;
+  padding: 4px 16px;
+  position: absolute;
+  top: 435px;
+  left: 0;
+}
+.recipe-day__container-image{
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-day__container-img{
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.recipe-day__container-title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 60px;
+  color: #25292D;
+  padding-top: 32px;
+  
+}
+
+.recipe-day__container-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #4A525A;
+  padding-top: 16px;
+}
+
+.recipe-day__container-like{
+  display: flex;
+  align-items: center;
+}
+
+.recipe-day__container-like-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #25292D;
+  padding-left: 9px;
+}
+
+.recipe-day__container-time{
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.recipe-day__container-time-img{
+  width: 28px;
+  height: 28px;
+}
+.recipe-day__container-time-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #25292D;
+  width: 78px; 
+}
+
+@media (max-width: 1024px) { 
+  .recipe-day {
+    gap: 30px;
+    padding-top: 157px;
+  }
+  .recipe-day__container-title {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 10px;
+  }
+  .recipe-day__author-link {
+    top: 360px;
+  }
+  .recipe-day__container {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 330px) {
+  .recipe-day {
+    display: block;
+  }
+
+  .recipe-day__author-link {
+    top: 260px;
+  }
+
+  .recipe-day__container{
+    padding-top: 20px;
+  }
+}
+
+.searching {
+  padding-top: 150px;
+}
+
+.searching__title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 51px;
+  text-align: center;
+  color: #25292D;
+}
+
+.searching__text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  padding-top: 16px;
+  text-align: center;
+  font-feature-settings: 'case' on;
+  color: #4A525A;
+}
+
+.searching__container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 64px;
+  
+}
+
+.searching__container-input{
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 894px;
+  margin: 0 auto;
+}
+ 
+.searching__input{
+  height: 73px; 
+  width: 716px;
+  background: white;
+  border: none;
+  box-shadow: 0px 8px 42px rgba(34, 39, 47, 0.04);
+  border-radius: 16px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color:  #808080;
+  padding-left: 32px;
+}
+
+.searching__button {
+  background-color: #FDB100;
+  color: #fff;
+  border: none; 
+  border-radius: 16px; 
+  min-height: 73px; 
+  min-width: 152px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+ 
+}
+
+.searching__items{
+  display: flex;
+  gap: 10px;
+  padding-top: 24px;
+  padding-bottom: 106px;
+  width: 100%;
+
+}
+
+.searching__items-link{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #808080;
+  padding-left: 32px;
+}
+
+@media (max-width: 1024px) {
+  .searching__input {
+    width: 500px;
+  }
+}
+
+@media (max-width: 330px) {
+  .searching__input {
+    width: 200px;
+  }
+.searching__button{
+  min-width: 100px;
+}
+}
+
+.footer {
+  background-color: #FBF9F4;
+  padding: 40px 0;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #FDB100;
+  margin-left: 100px;
+}
+
+.footer__desc{
+  font-family: 'Montserrat500', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #4A525A;
+  margin-right: 100px;
+}
