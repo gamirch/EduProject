@@ -86,7 +86,7 @@
             <div class="recipe-day__container-img">
               <div class="recipe-day__container-like">
                 <img class="recipe-day__container-like-img" src="img/like_border.svg"> 
-                <p class="recipe-day__container-like-text">356</p>
+                <p class ="recipe-day__container-like-text">356</p>
               </div>
               <div class="recipe-day__container-time">
                 <img class="recipe-day__container-time-img" src="img/timer_border.svg">
@@ -114,6 +114,60 @@
               </ul>
             </form>
         </div>
+    </section>
+
+    <section class="add-recipe container-form">
+      <button class="add-recipe__button_exit" href="#">
+        <img src="./img/Vector_close.svg" />
+      </button>
+      <h2 class="add-recipe__title">Войдите в профиль</h2>
+      <p class="add-recipe__text">
+        Добавлять рецепты могут только зарегистрированные пользователи.
+      </p>
+      <div class="add-recipe__button">
+        <button
+          class="add-recipe__button-login"
+          type="login"
+          name="authorization__form-button-login"> Войти
+        </button>
+        <button
+          class="add-recipe__button-registration"
+          type="sign up"
+          name="authorization__form-button-sig">Регистрация 
+        </button>
+      </div>
+    </section>
+  
+    <section class="registration container-form">
+      <button class="registration__button_exit" href="#">
+          <img src="./img/Vector_close.svg" />
+        </button>
+      <h2 class="registration__title">Регистрация</h2>
+      <input class="registration__input-name" type="text" placeholder="Имя" />
+      <input class="registration__input-login" type="text" placeholder="Логин" />
+      <div class="registration__input">
+        <input class="registration__input-password" type="password" name="" id="" placeholder="Пароль" />
+        <input class="registration__input-repeat-password"  type="password" name="" id="" placeholder="Повторите пароль" />
+      </div>
+      <p class="registration__password-text">Минимум 8 символов</p>
+      <div class="registration__button">
+        <button class="registration__button-registration">Зарегистрироваться</button>
+        <button class="registration__button-undo">Отмена</button>
+      </div>
+      <p class="registration__link">У меня уже есть аккаунт</a>
+    </section>
+    <section class="authorization container-form">
+      <button class="authorization__button_exit" href="#">
+          <img src="./img/Vector_close.svg" />
+        </button>
+      <h2 class="authorization__title">Войти</h2>
+      <input class="authorization__login" type="text" placeholder="Логин" />
+      <input class="authorization__password" type="password" name="" id="" placeholder="Пароль" />
+      <div class="authorization__button">
+        <button class="authorization__button-login">Войти</button>
+        <button class="authorization__button-undo">Отмена</button>
+      </div>
+      <p class="authorization__link">У меня уже есть аккаунт</a>
     </section>
   </main>
 
