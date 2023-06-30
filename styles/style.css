@@ -34,33 +34,29 @@
   font-display: swap;
 }
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
- /* box-sizing: border-box;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;*/
-}
-
-/*сетка для страницы
-.container{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-gap: 20px;
-  width:100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.container >*{
-  grid-column: span 12;
-}
-*/
-
-.container-form {
   box-sizing: border-box;
   width: 100%;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.container-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  padding: 15px;
+
+  border: 1px solid #000000;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1200px) {
@@ -90,7 +86,20 @@
   }
 }
 
-.add-recipe {
+.hide {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.recipe-add-dialog {
   position: relative;
   background-color: #ffffff;
   box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
@@ -101,7 +110,7 @@
   padding-left: 60px;
 }
 
-.add-recipe__button_exit {
+.recipe-add-dialog__button_exit {
   position: absolute;
   width: 14px;
   height: 14px;
@@ -111,27 +120,16 @@
   border: none;
 }
 
-.add-recipe__title{
+.recipe-add-dialog__title {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   color: #25292d;
-}
-
-.add-recipe__title {
   margin-top: 19px;
 }
 
-.add-recipe__text {
-  margin-top: 30px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-}
-.authorization__form-button {
+.authorization__form-button-login {
   font-family: 'Montserrat', sans-serif;
   border-radius: 16px;
   height: 45px;
@@ -146,18 +144,27 @@
   width: 250px;
 }
 
-.add-recipe__button {
+.recipe-add-dialog__button{
   margin-top: 40px;
   display: flex;
   gap: 24px;
 }
 
-.add-recipe__button-login {
-    background-color: #FDB100;
+.recipe-add-dialog__text {
+  margin-top: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.recipe-add-dialog__button-login{
+  background-color: #fdb100;
   color: #fff;
-  border: none; 
-  border-radius: 16px; 
-  min-height: 60px; 
+  border: none;
+  border-radius: 16px;
+  min-height: 60px;
   min-width: 278px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -165,7 +172,7 @@
   font-size: 18px;
 }
 
-.add-recipe__button-registration {
+.recipe-add-dialog__button-registration{
   max-width: 278px;
   background-color: transparent;
   border: 1px solid #fdb100;
@@ -177,23 +184,17 @@
   font-size: 18px;
   min-height: 60px;
   min-width: 278px;
-
   background-color: white;
-  color: #FDB100;
-  border: 1px solid #FDB100; 
-  border-radius: 16px; 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
+  border-radius: 16px;
+ 
 }
 
-.add-recipe__button-registration :hover {
+.recipe-add-dialog__button-registration:hover {
   color: #ffffff;
   background-color: #fdb100;
 }
 
-.add-recipe__button-login:hover {
+.recipe-add-dialog__button-login:hover {
   color: #fdb100;
   background-color: #ffffff;
   border: 1px solid #fdb100;
@@ -231,12 +232,12 @@
   margin-bottom: 100px;
 }
 
-  .registration__button-registration {
-  background-color: #FDB100;
+.registration__button-regstration {
+  background-color: #fdb100;
   color: #fff;
-  border: none; 
-  border-radius: 16px; 
-  min-height: 60px; 
+  border: none;
+  border-radius: 16px;
+  min-height: 60px;
   min-width: 278px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -244,7 +245,7 @@
   font-size: 18px;
 }
 
-.registration__button-undo {
+.registration__button-cancel {
   max-width: 278px;
   background-color: transparent;
   border: 1px solid #fdb100;
@@ -256,42 +257,36 @@
   font-size: 18px;
   min-height: 60px;
   min-width: 278px;
-
   background-color: white;
-  color: #FDB100;
-  border: 1px solid #FDB100; 
-  border-radius: 16px; 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
+  border-radius: 16px;
+ 
 }
 
-.registration__button-undo:hover {
+.registration__button-cancel:hover {
   color: #ffffff;
   background-color: #fdb100;
 }
 
-.registration__button-registration:hover {
+.registration__button-regstration:hover {
   color: #fdb100;
   background-color: #ffffff;
   border: 1px solid #fdb100;
 }
 
 .registration__link {
-position: absolute;
- width: 237px;
-height: 26px;
-text-align: center;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 28px;
-color: #FDB100;
-bottom: 60px;
-border-bottom: 2px dashed;
-left: 231px;
+  position: absolute;
+  width: 237px;
+  height: 26px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fdb100;
+  bottom: 60px;
+  border-bottom: 2px dashed;
+  left: 231px;
 }
 
 .registration__input-name {
@@ -363,19 +358,19 @@ left: 231px;
 }
 
 .registration__password-text {
-width: 276px;
-height: 28px;
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 28px;
-display: flex;
-align-items: center;
-color: rgba(37, 41, 45, 0.3);
+  width: 276px;
+  height: 28px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: rgba(37, 41, 45, 0.3);
 }
 
-.authorization  {
+.login {
   position: relative;
   background-color: #ffffff;
   box-shadow: 0px 16px 72px rgba(34, 39, 47, 0.05);
@@ -386,7 +381,7 @@ color: rgba(37, 41, 45, 0.3);
   padding-left: 60px;
 }
 
-.authorization__button_exit {
+.login__button_exit {
   position: absolute;
   width: 14px;
   height: 14px;
@@ -396,10 +391,76 @@ color: rgba(37, 41, 45, 0.3);
   border: none;
 }
 
-.authorization__title {
+.login__title {
   margin-top: 20px;
 }
-.authorization__login {
+
+.login__button {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 100px;
+}
+.login__button-login {
+  background-color: #fdb100;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  min-height: 60px;
+  min-width: 278px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.login__button-cancel {
+  max-width: 278px;
+  background-color: transparent;
+  border: 1px solid #fdb100;
+  color: #fdb100;
+  width: 278px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  min-height: 60px;
+  min-width: 278px;
+
+  background-color: white;
+  border-radius: 16px;
+}
+
+.login__button-cancel:hover {
+  color: #ffffff;
+  background-color: #fdb100;
+}
+
+.login__button-login:hover {
+  color: #fdb100;
+  background-color: #ffffff;
+  border: 1px solid #fdb100;
+}
+
+.login__link {
+  position: absolute;
+  margin-top: 40px;
+  color: #fdb100;
+  border-bottom: 2px dashed;
+  width: 237px;
+  height: 26px;
+  text-align: center;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  bottom: 60px;
+  left: 231px;
+}
+
+.login__input-login {
   height: 50px;
   width: 580px;
   background: white;
@@ -415,7 +476,7 @@ color: rgba(37, 41, 45, 0.3);
   margin-top: 47px;
 }
 
-.authorization__password {
+.login__input-password {
   height: 50px;
   width: 580px;
   background: white;
@@ -430,77 +491,25 @@ color: rgba(37, 41, 45, 0.3);
   padding-left: 32px;
   margin-top: 20px;
 }
-.authorization__button {
-  margin-top: 30px;
-  display: flex;
-  gap: 24px;
-  margin-bottom: 100px;
+
+.header-bg {
+  background-color: #fefefbe0;
 }
 
-  .authorization__button-login {
-  background-color: #FDB100;
-  color: #fff;
-  border: none; 
-  border-radius: 16px; 
-  min-height: 60px; 
-  min-width: 278px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.authorization__button-undo {
-  max-width: 278px;
-  background-color: transparent;
-  border: 1px solid #fdb100;
-  color: #fdb100;
-  width: 278px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  min-height: 60px;
-  min-width: 278px;
-
-  background-color: white;
-  color: #FDB100;
-  border: 1px solid #FDB100; 
-  border-radius: 16px; 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.authorization__button-login:hover {
-  color: #fdb100;
-  background-color: #ffffff;
-  border: 1px solid #fdb100;
-}
-
-.authorization__button-undo:hover {
-  color: #ffffff;
+#progress {
   background-color: #fdb100;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.authorization__link{
-  position: absolute;
-  margin-top: 40px;
-    color: #FDB100;
-  border-bottom: 2px dashed;
-  width: 237px;
-  height: 26px;
-  text-align: center;
-  
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-  bottom: 60px;
-  left: 231px;
-}
 
 body {
   font-family: "Montserrat",sans-serif;   
@@ -976,6 +985,15 @@ img {
   width: 78px; 
 }
 
+.button_like {
+  background-color: transparent;
+  border: none;
+}
+
+.isLike.recipe-day__container-like-img {
+  fill: red
+}
+
 @media (max-width: 1024px) { 
   .recipe-day {
     gap: 30px;
@@ -1128,7 +1146,6 @@ transition: box-shadow 0.2s ease-in-out;
 }
 
 
-
 .footer {
   background-color: #FBF9F4;
   padding: 40px 0;
@@ -1158,6 +1175,5 @@ transition: box-shadow 0.2s ease-in-out;
   color: #4A525A;
   margin-right: 100px;
 }
-.liked{
-  color:red;
-}
+
+
